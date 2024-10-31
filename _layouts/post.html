@@ -2,4 +2,7 @@
 layout: default
 ---
 
+{% if post.featured_image %}
+    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" style="width:100px;height:auto;">
+{% endif %}
 {{ content }}
