@@ -2,4 +2,15 @@
 layout: default
 ---
 
-{{ content }}
+<header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+
+    {% if page.featured_image %}
+        <img src="{{ page.featured_image }}" alt="Featured image for {{ page.title }}" class="post-featured-image">
+    {% endif %}
+</header>
+
+<div class="post-content">
+    {{ content }}
+</div>
