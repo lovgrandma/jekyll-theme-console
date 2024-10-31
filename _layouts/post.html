@@ -3,6 +3,6 @@ layout: default
 ---
 
 {% if post.featured_image %}
-    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" style="width:100px;height:auto;">
+    <img src="{{ post.featured_image }}" alt="{{ post.title | escape }}" style="width:100px;height:auto;">
 {% endif %}
 {{ content }}
